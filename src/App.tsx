@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./App.css";
+import AddForm from "./pages/components/AddForm";
+import Layout from "./pages/components/Layout";
+import EditForm from "./pages/EditForm";
+import TodoList from "./pages/TodoList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={TodoList} />
+        <Route exact path="/edit/:id" component={EditForm} />
+        <Route exact path="/add" component={AddForm} />
+        <Route path="*">
+          <Layout>
+            <h3 className="page-not-found">404 page not found</h3>
+          </Layout>
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

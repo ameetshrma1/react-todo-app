@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+.submit {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.page-not-found {
+  margin: 50px;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px;
+}
+
+.add-new-card {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+}
